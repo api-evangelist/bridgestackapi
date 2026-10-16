@@ -1,0 +1,65 @@
+generated: '2026-10-16'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 4
+  own: 3
+  other_domain: 1
+  platform: 0
+  roles:
+  - api
+  - docs
+  - status
+  - website
+hosts:
+- host: api.bridgestackapi.com
+  found_by:
+  - apis[]
+  - contract-discovery
+  types: []
+  serves:
+  - api
+  registrable_domain: bridgestackapi.com
+  role: api
+  relation: own
+- host: bridgestackapi.com
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - Website
+  serves:
+  - cdn
+  - hosting
+  vendor: cloudflare
+  registrable_domain: bridgestackapi.com
+  role: website
+  relation: own
+- host: bridgestackapi.statuspage.io
+  found_by:
+  - pointer
+  types:
+  - StatusPage
+  serves: []
+  registrable_domain: statuspage.io
+  role: status
+  relation: other-domain
+- host: www.bridgestackapi.com
+  found_by:
+  - pointer
+  - apis[]
+  - docs-index
+  types:
+  - Login
+  - Documentation
+  - APIReference
+  - GettingStarted
+  serves:
+  - docs
+  registrable_domain: bridgestackapi.com
+  role: docs
+  relation: own

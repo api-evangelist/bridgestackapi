@@ -1,23 +1,89 @@
 aid: bridgestackapi
+
 name: BridgeStackAPI
-description: 'BridgeStackAPI is a company surfaced via the API Evangelist harvest backlog (source: g2-catalog)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'BridgeStackAPI provides a lightweight API gateway that enables per‑client usage control, rate‑limiting, and custom routing without rebuilding the gateway. It offers dashboards, real‑time logs, and integration guides for Node.js, cURL, and Python, helping developers quickly enforce policies and monitor API consumption.'
+
 url: https://raw.githubusercontent.com/api-evangelist/bridgestackapi/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:g2-catalog
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-16 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-16'
+
 modified: '2026-10-16'
+
 tags:
-- Company
-apis: []
+- API Gateway
+- Usage Control
+- B2B SaaS
+- External APIs
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: SecurityTxt
+  url: well-known/bridgestackapi-bridgestackapi-security.txt
+- type: WellKnown
+  url: well-known/bridgestackapi-well-known.yml
+- type: Spectral
+  url: rules/bridgestackapi-rules.yml
+- type: Authentication
+  url: authentication/bridgestackapi-authentication.yml
+- type: Conformance
+  url: conformance/bridgestackapi-conformance.yml
+- type: Hosts
+  url: hosts/bridgestackapi-hosts.yml
+- type: Vendors
+  url: vendors/bridgestackapi-vendors.yml
+- type: StatusPage
+  url: https://bridgestackapi.statuspage.io/
+- type: Login
+  url: https://www.bridgestackapi.com/login
+- type: Documentation
+  url: https://www.bridgestackapi.com/docs
+- type: APIReference
+  url: https://www.bridgestackapi.com/docs/api-reference
+- type: GettingStarted
+  url: https://www.bridgestackapi.com/docs/getting-started/quickstart
+- type: DomainSecurity
+  url: security/bridgestackapi-domain-security.yml
 - type: Website
   url: https://bridgestackapi.com/
+
+apis:
+- aid: bridgestackapi:bridgestackapi-api
+  name: BridgeStackAPI API
+  description: 'BridgeStackAPI API as documented publicly: 1 operations. Contract generated from the documentation by API Evangelist (2026-10-16);
+    not the provider''s own document.'
+  humanURL: https://www.bridgestackapi.com/docs/api-reference
+  baseURL: https://api.bridgestackapi.com
+  properties:
+  - type: OpenAPI
+    url: openapi/_ae-authored/bridgestackapi-openapi-generated.yml
+    x-provenance: generated
+
+x-coverage:
+  state: blocked
+  reason: bot-challenge
+  detail: Cloudflare JavaScript challenge blocks access to OpenAPI spec at https://api.bridgestackapi.com/openapi.json
+  evidence:
+    - url: https://api.bridgestackapi.com/openapi.json
+      status: 403
+  checked: '2026-10-16'
+x-enrichment:
+  date: '2026-10-16'
+  status: enriched
+  artifacts_added: 11
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

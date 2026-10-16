@@ -1,0 +1,67 @@
+openapi: 3.1.0
+info:
+  title: BridgeStackAPI API
+  version: '2026-10-16'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-16: 1 operation(s) read from 7 public documentation page(s) (each operation
+    names its page in x-source). This is not the provider''s published contract; BridgeStackAPI has published no machine-readable contract that
+    the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 1
+    documentation: 0
+    pages-with-code: 6
+    pages-read: 7
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-16'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://www.bridgestackapi.com/docs/api-reference
+  - https://www.bridgestackapi.com/docs/api-reference/curl
+  - https://www.bridgestackapi.com
+  - https://www.bridgestackapi.com/docs/getting-started/quickstart
+  - https://www.bridgestackapi.com/docs/integration-guides/proxying-provider
+  - https://www.bridgestackapi.com/docs/api-reference/nodejs
+  - https://www.bridgestackapi.com/docs/api-reference/python
+servers:
+- url: https://api.bridgestackapi.com
+paths:
+  /v1/{apireference}:
+    get:
+      operationId: get_v1_apireference
+      tags:
+      - Api
+      summary: GET /v1/{apiReference}
+      x-source: https://www.bridgestackapi.com/docs/api-reference
+      parameters:
+      - name: apireference
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl -H "x-api-key: YOUR_API_KEY" https://api.bridgestackapi.com/v1/<API_REFERENCE>
+
+          ON THIS PAGE
+
+          Overview
+
+          Authentication
+
+          Examples'
+components:
+  securitySchemes:
+    apiKey:
+      type: apiKey
+      in: header
+      name: x-api-key
+security:
+- apiKey: []
+tags:
+- name: Api

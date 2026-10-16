@@ -1,0 +1,17 @@
+generated: '2026-10-16'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://www.bridgestackapi.com/docs/getting-started/authentication
+sources:
+- https://www.bridgestackapi.com/docs/getting-started/authentication
+- https://www.bridgestackapi.com/docs/api-reference#auth
+- https://www.bridgestackapi.com/docs/api-reference
+- https://www.bridgestackapi.com/docs/core-concepts
+description: Authentication schemes for BridgeStackAPI
+schemes:
+- type: apiKey
+  name: x-api-key
+  evidence: Send the BridgeStackAPI key in every request using the x-api-key header.
+  location: header
+  header: x-api-key
+docs: https://www.bridgestackapi.com/docs/getting-started/authentication
