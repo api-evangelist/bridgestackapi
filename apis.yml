@@ -62,17 +62,16 @@ common:
   url: https://bridgestackapi.com/
 
 apis:
-- aid: bridgestackapi:bridgestackapi-api
-  name: BridgeStackAPI API
-  description: 'BridgeStackAPI API as documented publicly: 1 operations. Contract generated from the documentation by API Evangelist (2026-10-16);
-    not the provider''s own document.'
+- aid: bridgestackapi:bridgestackapi-bridgestackapi-api-api
+  name: BridgeStackAPI BridgeStackAPI API
+  description: The BridgeStackAPI API API from BridgeStackAPI — 1 operation(s) for bridgestackapi api.
   humanURL: https://www.bridgestackapi.com/docs/api-reference
   baseURL: https://api.bridgestackapi.com
+  tags:
+  - BridgeStackAPI API
   properties:
   - type: OpenAPI
-    url: openapi/_ae-authored/bridgestackapi-openapi-generated.yml
-    x-provenance: generated
-
+    url: openapi/bridgestackapi-bridgestackapi-api-api-openapi.yml
 x-coverage:
   state: blocked
   reason: bot-challenge
